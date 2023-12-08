@@ -1,0 +1,1 @@
+# This is here to make bazel happy. The actual deps are in MODULE.bazel.
