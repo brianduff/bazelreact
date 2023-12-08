@@ -1,6 +1,6 @@
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@aspect_bazel_lib//lib:copy_to_bin.bzl", "copy_to_bin")
-load("@npm//:vite/package_json.bzl", vite_bin = "bin")
+load("@npm//frontend:vite/package_json.bzl", vite_bin = "bin")
 
 # This macro expands to a link_npm_package for each third-party package in package.json
 npm_link_all_packages(name = "node_modules")
@@ -29,7 +29,6 @@ copy_to_bin(
         "src/**/*.tsx",
         "utils/**/*.ts",
         "utils/**/*.tsx",
-        "public/**/*.json",
         "public/**/*.svg",
     ]),
 )
